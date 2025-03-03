@@ -17,7 +17,7 @@ module "talos_linode_clusters" {
   pod_cidr           = "10.245.0.0/16"
   service_cidr       = "10.97.0.0/12"
   linode_token       = "XXXXX"
-  talos_version      = v1.9.1"
+  talos_version      = "v1.9.1"
   kubernetes_version = "1.31.0"
   config_patch_files = ["cilium.yaml"]
 }

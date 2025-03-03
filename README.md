@@ -1,4 +1,5 @@
-Example Usage
+## Example Usage
+```
 // Create a Talos Linux cluster
 
 module "talos_linode_clusters" {
@@ -20,5 +21,7 @@ module "talos_linode_clusters" {
   kubernetes_version = "1.31.0"
   config_patch_files = ["cilium.yaml"]
 }
+
+```
 
 # terraform-linode-talos

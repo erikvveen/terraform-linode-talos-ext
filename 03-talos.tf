@@ -6,7 +6,7 @@ resource "random_string" "name" {
 }
 
 module "talos_control_plane_nodes" {
-  source  = "git::https://github.com/erikvveen/talos-nodes.git"
+  source  = "git::https://github.com/erikvveen/talos-nodes-ext.git"
 
   count = var.controlplane_count
 
@@ -18,7 +18,7 @@ module "talos_control_plane_nodes" {
 
 }
 module "talos_worker_nodes" {
-  source  = "git::https://github.com/erikvveen/talos-nodes.git"
+  source  = "git::https://github.com/erikvveen/talos-nodes-ext.git"
 
   count = var.workers_count
 

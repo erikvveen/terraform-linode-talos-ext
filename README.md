@@ -2,8 +2,7 @@ Example Usage
 // Create a Talos Linux cluster
 
 module "talos_linode_clusters" {
-  source = "git::https://github.com/erikvveen/terraform-linode-talos.git"
-  count = length(local.linode_clusters)
+  source = "git::https://github.com/erikvveen/terraform-linode-talos-ext.git"
   
   providers = {
     talos = talos
@@ -19,7 +18,7 @@ module "talos_linode_clusters" {
   linode_token       = "XXXXX"
   talos_version      = v1.9.1"
   kubernetes_version = "1.31.0"
-  config_patch_files = [./cilium]
+  config_patch_files = ["cilium.yaml"]
 }
 
 # terraform-linode-talos

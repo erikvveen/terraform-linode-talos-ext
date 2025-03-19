@@ -1,5 +1,9 @@
 ## Example Usage
 ```
+First upload talos image, see: https://github.com/siderolabs/talos/releases/tag/v1.9.5 and get the image_id.
+
+Second, get your linode token.
+
 // Create a Talos Linux cluster
 
 module "talos_linode_clusters" {
@@ -20,6 +24,7 @@ module "talos_linode_clusters" {
   talos_version      = "v1.9.1"
   kubernetes_version = "1.31.0"
   config_patch_files = ["cilium.yaml"]
+  image              = "private/<image_id>
 }
 
 ```
